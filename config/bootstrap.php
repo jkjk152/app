@@ -155,7 +155,7 @@ if (!$fullBaseUrl) {
     }
 
     $httpHost = env('HTTP_HOST');
-    if (isset($httpHost)) {
+    if ($httpHost !== null) {
         $fullBaseUrl = 'http' . $s . '://' . $httpHost;
     }
     unset($httpHost, $s);
